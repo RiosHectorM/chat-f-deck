@@ -3,7 +3,7 @@
 import axios from "axios";
 import { signIn, useSession } from 'next-auth/react';
 import { useCallback, useEffect, useState } from 'react';
-import { BsGithub, BsGoogle  } from 'react-icons/bs';
+import { BsGoogle  } from 'react-icons/bs';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import { useRouter } from "next/navigation";
 
@@ -176,10 +176,6 @@ const AuthForm = () => {
 
           <div className="mt-6 flex gap-2">
             <AuthSocialButton 
-              icon={BsGithub} 
-              onClick={() => socialAction('github')} 
-            />
-            <AuthSocialButton 
               icon={BsGoogle} 
               onClick={() => socialAction('google')} 
             />
@@ -196,15 +192,6 @@ const AuthForm = () => {
             text-gray-500
           "
         >
-          <div>
-            {variant === 'LOGIN' ? 'New to Messenger?' : 'Already have an account?'} 
-          </div>
-          <div 
-            onClick={toggleVariant} 
-            className="underline cursor-pointer"
-          >
-            {variant === 'LOGIN' ? 'Create an account' : 'Login'}
-          </div>
         </div>
       </div>
     </div>
