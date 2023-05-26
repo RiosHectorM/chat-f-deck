@@ -26,28 +26,29 @@ const Input: React.FC<InputProps> = ({
   type = 'text',
   disabled,
 }) => {
-  return ( 
+  return (
     <div>
-      <label 
-        htmlFor={id} 
-        className="
+      <label
+        htmlFor={id}
+        className='
           block 
           text-sm 
           font-medium 
           leading-6 
           text-gray-900
-        "
+        '
       >
         {label}
       </label>
-      <div className="mt-2">
+      <div className='mt-2'>
         <input
           id={id}
           type={type}
           autoComplete={id}
           disabled={disabled}
           {...register(id, { required })}
-          className={clsx(`
+          className={clsx(
+            `
             form-input
             block 
             w-full 
@@ -62,7 +63,7 @@ const Input: React.FC<InputProps> = ({
             placeholder:text-gray-400 
             focus:ring-2 
             focus:ring-inset 
-            focus:ring-sky-600 
+            focus:ring-[#be9e44]
             sm:text-sm 
             sm:leading-6`,
             errors[id] && 'focus:ring-rose-500',
@@ -71,7 +72,7 @@ const Input: React.FC<InputProps> = ({
         />
       </div>
     </div>
-   );
+  );
 }
  
 export default Input;
