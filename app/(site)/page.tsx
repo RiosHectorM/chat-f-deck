@@ -23,10 +23,10 @@ const Auth = () => {
     >
       <div className='sm:mx-auto sm:w-full sm:max-w-md'>
         <Image
-          height='120'
-          width='120'
+          height='280'
+          width='280'
           className='mx-auto w-auto rounded-full'
-          src='/images/flight-logo.jpg'
+          src='/images/LOGO2.png'
           alt='Logo'
         />
         <h2
@@ -36,7 +36,7 @@ const Auth = () => {
             text-3xl 
             font-bold 
             tracking-tight 
-            text-white
+            text-[#be9e44]
           '
         >
           Sign in to your account
